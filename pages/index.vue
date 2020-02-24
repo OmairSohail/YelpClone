@@ -79,8 +79,75 @@
                 </optgroup>
             </b-select>         
       </b-field>
+      <div class="categories">
+       <b-navbar-item href="#">
+                Plumbers
+            </b-navbar-item>
+            <b-navbar-item href="#">
+                Restaurants
+            </b-navbar-item>
+            <b-navbar-dropdown label="Home Services">
+                <b-navbar-item>
+                   <nuxt-link to="/about">Air Conditioning & Cleaning </nuxt-link>
+                </b-navbar-item>
+                <b-navbar-item>
+                   <nuxt-link to="/contractors">Contractors </nuxt-link>
+                </b-navbar-item>
+            </b-navbar-dropdown>
+            <b-navbar-item href="#">
+                Delivery
+            </b-navbar-item>
+      </div>
+            
     
-    
+    </div>
+
+  </div>
+</section>
+<section class="hero is-medium is-danger is-bold">
+  <div class="hero-head">
+    <h3 class="is-size-4 has-text-white-ter has-text-centered">Find the Best Businesses in Town</h3>
+  </div>
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-128x128">
+                <img src="../assets/shirts.jpg" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="is-size-4">Dry Cleaning</p>
+            </div>
+          </div>
+        </div>
+         <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-128x128">
+                <img src="../assets/shirts.jpg" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="is-size-4">Dry Cleaning</p>
+            </div>
+          </div>
+        </div>
+         <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-128x128">
+                <img src="../assets/shirts.jpg" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="is-size-4">Dry Cleaning</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -111,5 +178,10 @@ export default {
 
 .center > * {
   padding:0.5rem;
+}
+
+.categories{
+  display:flex;
+  flex-direction:row;
 }
 </style>
