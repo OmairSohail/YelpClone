@@ -20,10 +20,10 @@
                 Documentation
             </b-navbar-item>
             <b-navbar-dropdown label="info">
-                <b-navbar-item href="#">
-                    About
+                <b-navbar-item>
+                   <nuxt-link to="/about"> About </nuxt-link>
                 </b-navbar-item>
-                <b-navbar-item href="#">
+                <b-navbar-item>
                     Contact
                 </b-navbar-item>
             </b-navbar-dropdown>
@@ -32,12 +32,18 @@
         <template slot="end">
             <b-navbar-item tag="div">
                 <div class="buttons">
+                  
                     <a class="button is-grey">
-                        Sign up
+                       <nuxt-link to="/signup"> Sign up </nuxt-link>
                     </a>
+                  
+                  
                     <a class="button is-secondary is-outlined">
+                      <nuxt-link to="/login">
                         Log in
+                        </nuxt-link>
                     </a>
+                  
                 </div>
             </b-navbar-item>
         </template>
@@ -71,10 +77,8 @@
                     <option value="daenerys-targaryen">Daenerys Targaryen</option>
                     <option value="jon-snow">Jon Snow</option>
                 </optgroup>
-            </b-select>
-            
+            </b-select>         
       </b-field>
-      <input type="search" id="address-input" placeholder="Where are we going?" />
     
     
     </div>
