@@ -1,53 +1,111 @@
 <template>
-  <section class="section">
-    <div class="columns is-mobile">
-      <card
-        title="Free"
-        icon="github-circle"
-      >
-        Open source on <a href="https://github.com/buefy/buefy">
-          GitHub
-        </a>
-      </card>
+<div>
+<section class="hero is-fullheight-with-navbar">
+  <div class="hero-head">
+    <div class="container">
+      <b-navbar class="navbar">
+        <template slot="brand">
+            <b-navbar-item tag="router-link" :to="{ path: '/' }">
+                <img
+                    src="../assets/logo.png"
+                    alt="Lightweight UI components for Vue.js based on Bulma"
+                >
+            </b-navbar-item>
+        </template>
+        <template slot="start">
+            <b-navbar-item href="#">
+                Home
+            </b-navbar-item>
+            <b-navbar-item href="#">
+                Documentation
+            </b-navbar-item>
+            <b-navbar-dropdown label="info">
+                <b-navbar-item href="#">
+                    About
+                </b-navbar-item>
+                <b-navbar-item href="#">
+                    Contact
+                </b-navbar-item>
+            </b-navbar-dropdown>
+        </template>
 
-      <card
-        title="Responsive"
-        icon="cellphone-link"
-      >
-        <b class="has-text-grey">
-          Every
-        </b> component is responsive
-      </card>
-
-      <card
-        title="Modern"
-        icon="alert-decagram"
-      >
-        Built with <a href="https://vuejs.org/">
-          Vue.js
-        </a> and <a href="http://bulma.io/">
-          Bulma
-        </a>
-      </card>
-
-      <card
-        title="Lightweight"
-        icon="arrange-bring-to-front"
-      >
-        No other internal dependency
-      </card>
+        <template slot="end">
+            <b-navbar-item tag="div">
+                <div class="buttons">
+                    <a class="button is-grey">
+                        Sign up
+                    </a>
+                    <a class="button is-secondary is-outlined">
+                        Log in
+                    </a>
+                </div>
+            </b-navbar-item>
+        </template>
+    </b-navbar>
     </div>
-  </section>
+    
+  </div>
+  <div class="hero-body">
+    <div class="container center">
+     <img src="../assets/logo.png" width="150" height="200"/>
+     <b-field>
+            <b-select placeholder="Select a category" icon="account">
+                <optgroup label="Black Sails">
+                    <option value="flint">Flint</option>
+                    <option value="silver">Silver</option>
+                    <option value="vane">Vane</option>
+                    <option value="billy">Billy</option>
+                    <option value="jack">Jack</option>
+                </optgroup>
+
+                <optgroup label="Breaking Bad">
+                    <option value="heisenberg">Heisenberg</option>
+                    <option value="jesse">Jesse</option>
+                    <option value="saul">Saul</option>
+                    <option value="mike">Mike</option>
+                </optgroup>
+
+                <optgroup label="Game of Thrones">
+                    <option value="tyrion-lannister">Tyrion Lannister</option>
+                    <option value="jamie-lannister">Jamie Lannister</option>
+                    <option value="daenerys-targaryen">Daenerys Targaryen</option>
+                    <option value="jon-snow">Jon Snow</option>
+                </optgroup>
+            </b-select>
+            
+      </b-field>
+      <input type="search" id="address-input" placeholder="Where are we going?" />
+    
+    
+    </div>
+  </div>
+</section>
+</div>
 </template>
 
 <script>
-import Card from '~/components/Card'
-
 export default {
-  name: 'HomePage',
 
-  components: {
-    Card
-  }
 }
 </script>
+
+<style scoped>
+.hero{
+  /* background-image: url("../assets/background.jpg"); */
+  /* background:rgba(255,0,0,0.3); */
+  
+}
+.hero-head{
+  padding:1rem;
+}
+
+.center{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center > * {
+  padding:0.5rem;
+}
+</style>

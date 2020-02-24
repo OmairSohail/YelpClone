@@ -12,7 +12,11 @@ module.exports = {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { href:"https://fonts.googleapis.com/css?family=Montserrat&display=swap" ,rel:"stylesheet"}
+    ],
+    scripts:[
+      { src:"https://kit.fontawesome.com/52c84d4ffe.js" ,crossorigin:"anonymous"}
     ]
   },
   /*
@@ -28,6 +32,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '@/plugins/places.js'
   ],
   /*
   ** Nuxt.js dev-modules
