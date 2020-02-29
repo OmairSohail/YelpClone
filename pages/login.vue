@@ -5,25 +5,7 @@
     </div>
     <section class="hero is-fullheight">
       <div class="hero-body">
-        <section>
-            <h3 class="is-size-3 has-text-danger">Login to Yelp</h3>
-            <h3 class="is-size-4">New To Yelp ? <a><nuxt-link to="/signup">SignUp Now</nuxt-link></a></h3>
-            <h3>By continuing, you agree to <a>Yelp’s</a> Terms of Service and acknowledge <a>Yelp’s</a> Privacy Policy.</h3>
-
-            <b-field label="Email">
-                <b-input type="email" maxlength="30"></b-input>
-            </b-field>
-
-            <b-field label="Password">
-                <b-input type="password" maxlength="30" password-reveal></b-input>
-            </b-field>
-            <a><nuxt-link to="/forgot">Forgot Password ?</nuxt-link></a>
-
-            <b-field>
-                <b-button type="is-danger" class="loginbtn is-rounded">Login</b-button>
-            </b-field>
-     </section>
-     
+        <loginform/>
          <div class="">
            <img src="../assets/signup_pic.png" height="100">
          </div>
@@ -88,8 +70,11 @@
 </template>
 
 <script>
+import loginform from '../components/loginform'
 export default {
-   name:'login'
+   components:{
+       loginform
+   }
 }
 </script>
 
@@ -116,8 +101,5 @@ export default {
     margin-top:2rem;
 }
 
-.loginbtn{
-    margin-top:1rem;
-    padding:0 2rem;
-}
+
 </style>

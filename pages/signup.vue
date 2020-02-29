@@ -5,38 +5,7 @@
     </div>
     <section class="hero is-fullheight">
       <div class="hero-body">
-        <section>
-            <h3 class="is-size-3 has-text-danger">Sign Up for Yelp</h3>
-            <h3 class="is-size-4">Connect with great local businesses</h3>
-            <h3>By continuing, you agree to <a>Yelp’s</a> Terms of Service and acknowledge <a>Yelp’s</a> Privacy Policy.</h3>
-            <b-field label="Name">
-                <b-input type="text"></b-input>
-            </b-field>
-
-            <b-field label="Email">
-                <b-input type="email" maxlength="30"></b-input>
-            </b-field>
-
-            <b-field label="Username">
-                <b-input type="text" maxlength="30"></b-input>
-            </b-field>
-
-            <b-field label="Password">
-                <b-input type="password" maxlength="30" password-reveal></b-input>
-            </b-field>
-
-            <b-field label="Select a date">
-                <b-datepicker
-                    :show-week-number="showWeekNumber"
-                    placeholder="Click to select..."
-                    icon="calendar-today">
-                </b-datepicker>
-            </b-field>
-
-            <b-field>
-                <b-button type="is-danger" class="is-rounded">Signup</b-button>
-            </b-field>
-     </section>
+       <signupform/>
      
          <div class="">
            <img src="../assets/signup_pic.png" height="100">
@@ -102,8 +71,11 @@
 </template>
 
 <script>
+import signupform from '../components/signupform'
 export default {
-   name:'signup'
+   components:{
+       signupform
+   }
 }
 </script>
 
