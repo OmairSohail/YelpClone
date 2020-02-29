@@ -11,7 +11,7 @@ export const getters = {
 }
 
 export const mutation = {
-   Increment(state){
+   Plusone(state){
       state.Counter++
    }
 }

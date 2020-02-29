@@ -3,16 +3,16 @@ export const state = () => ({
 }) 
 
 export const actions = {
-    setUser({commit},payload) {    
-         commit('setUser',payload)
-         }
+    // setUser({commit},payload) {    
+    //      commit('setUser',payload)
+    //      }
 }
 
 export const getters = {
 
 }
 
-export const mutation = {
+export const mutations = {
    setUser(state,payload){
         state.user.push(payload)
    }
