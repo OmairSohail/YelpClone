@@ -24,7 +24,7 @@
                     <button class="button is-danger" @click="logout()">Signout</button>
                 </div> -->
 
-                <div v-for="u in user" :key="u.id">{{u.email}}</div>
+                <div v-for="u in user" :key="u">{{u.email}}</div>
                 <b-navbar-dropdown label="">
                     <b-navbar-item>
                        <nuxt-link to="success/Dashboard"> Dashboard </nuxt-link>

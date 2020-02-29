@@ -96,7 +96,9 @@ import firebase from '../plugins/firebase'
 import {mapState,mapMutations} from 'vuex'
 export default {
     data(){
+      return{
 
+      }
     },
     components:{
          navbar2
@@ -114,20 +116,23 @@ export default {
     ,
     mounted(){
          this.$nextTick(()=>{ 
-            firebase.auth().onAuthStateChanged((user)=>{
-            if(user){
-              const userData = {
-                id:user.uid,
-                name:user.displayName,
-                email:user.email
-              }
-               this.set(userData)
-               console.log('user logged in ',user.email)
-            }else{
-              this.set()
-               console.log('notlog in ')
-            }
-        })
+            if(this.$store.state.user.user == ''){
+               firebase.auth().onAuthStateChanged((user)=>{
+                    if(user){
+                    const userData = {
+                        id:user.uid,
+                        name:user.displayName,
+                        email:user.email
+                    }
+                    this.set(userData)
+                    console.log('user logged in ',user.email)
+                    }else{
+                    this.set()
+                    console.log('notlog in ')
+                    }
+                })
+            } 
+           
       })
     }
 }
